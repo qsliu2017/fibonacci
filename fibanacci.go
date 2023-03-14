@@ -27,8 +27,8 @@ func Fibonacci2(n int) int {
 }
 
 func Fibonacci3(n int) int {
-	if n == 0 {
-		return 0
+	if n < 2 {
+		return n
 	}
 	ans, _, _, _ := matrixN(n - 1)
 	return ans
