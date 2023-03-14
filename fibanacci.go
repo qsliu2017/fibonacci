@@ -1,22 +1,15 @@
 package fibonacci
 
 func Fibonacci1(n int) int {
-	switch n {
-	case 0:
-		return 0
-	case 1:
-		return 1
-	default:
-		return Fibonacci1(n-1) + Fibonacci1(n-2)
+	if n < 2 {
+		return n
 	}
+	return Fibonacci1(n-1) + Fibonacci1(n-2)
 }
 
 func Fibonacci2(n int) int {
-	if n == 0 {
-		return 0
-	}
-	if n == 1 {
-		return 1
+	if n < 2 {
+		return n
 	}
 	fib := make([]int, n+1)
 	fib[1] = 1
